@@ -5,7 +5,14 @@ body{
   font-style: normal;
 
   margin: 0;
-  background-color: rgb(243, 250, 255);
+  background-color: rgb(232, 232, 232);
+  
+}
+
+#background{
+    background-image: url("img/background.png.PNG");
+    width: auto;
+    height: 1000px;
 }
 
 .container{
@@ -33,23 +40,53 @@ header{
     filter: drop-shadow(10px 1px 16px) 
 }
 
-.gameStart{
+#gameStart{
     font-family: "Smooch Sans", serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
 
-    background-color: #d50e0ee8;
+    background-color: #ecffeee8;
     cursor: pointer;
     overflow: hidden;
-    border: none;
-    border-radius: 20px;
-    margin-left: 19.1em;
+    border: 4px solid #1cad2ae8;
+    /* border-radius: 20px; */
+    margin-left: 18.7em;
     font-size: xx-large;
     padding: 30px;
+    font-weight:450;
+    margin-top: 70px;
+}
+
+button{
+    border-radius: 20px;
 }
 
 button:hover{
-    background-color: #ff8787;
-    border-radius: 20px;
+    background-color: #1eba2e9c;/*#3a69e9;*/
+    transition: 0.5s;
+}
+
+
+.buttonGames{
+    height: 15em;
+    width: auto;
+}
+
+.btn{
+    background: transparent;
+    border: none;
+    flex-wrap: wrap;
+    justify-items: center;
+    margin-left: 31px;
+}
+
+#imgPlace{
+    width: auto;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.363);
+    border-radius: 90px;
+    margin-left: 32.5em;
+    margin-top: 50px;
+    filter: drop-shadow(10px 1px 90px) 
 }

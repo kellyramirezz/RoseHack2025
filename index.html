@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
+<div id="background">
 <body>
     <div class="container">
         <header>
@@ -23,11 +25,21 @@
     <img class="logo" src="img/BasketTrashLogo.PNG" alt="Game Logo - Basket Trash">
 
     <div>
-        <button class="gameStart"> Start Game Now!</button>
+        <button onclick="gameFunc();" id="gameStart"> Start Game Now!</button>
     </div>
 
-    <div>
-        <p>About Us... Contact </p>
+    <div style="display: none;" id="btnContainer" >
+        <button id="glass" class="btn"><img class="buttonGames" src="img/glass.PNG"></button>
+        <button id="haz" class="btn"><img class="buttonGames" src="img/haz.PNG"></button>
+        <button id="metal" class="btn"><img class="buttonGames" src="img/paper.PNG"></button>
+        <button id="organic" class="btn"><img class="buttonGames" src="img/waste.PNG"></button>
+        <button id="paper" class="btn"><img class="buttonGames" src="img/plastic.PNG"></button>
+        <button id="plastic" class="btn"><img class="buttonGames" src="img/organic.PNG"></button>
+        <button id="waste" class="btn"><img class="buttonGames" src="img/metal.PNG"></button>
+
+        <img id="imgPlace">
     </div>
+
 </body>
+</div>
 </html>
