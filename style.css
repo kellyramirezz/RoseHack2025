@@ -1,6 +1,55 @@
-body {
+body{
   font-family: "Smooch Sans", serif;
   font-optical-sizing: auto;
   font-weight: weight;
   font-style: normal;
+
+  margin: 0;
+  background-color: rgb(243, 250, 255);
+}
+
+.container{
+    margin-top: -43px;
+    line-height: 100px;
+}
+
+header{
+    background: rgb(18, 65, 18);
+}
+
+#title{
+    text-align: center;
+    font-size: xx-large;
+}
+
+
+.logo{
+    margin-top: -7.7rem;
+    width: auto;
+    height: 390px;
+    margin-left: auto;
+    margin-right:auto;
+    display: block;
+    filter: drop-shadow(10px 1px 16px) 
+}
+
+.gameStart{
+    font-family: "Smooch Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+
+    background-color: #d50e0ee8;
+    cursor: pointer;
+    overflow: hidden;
+    border: none;
+    border-radius: 20px;
+    margin-left: 19.1em;
+    font-size: xx-large;
+    padding: 30px;
+}
+
+button:hover{
+    background-color: #ff8787;
+    border-radius: 20px;
 }
