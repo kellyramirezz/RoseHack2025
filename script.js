@@ -2,52 +2,69 @@
 function gameFunc(){
 
     document.getElementById("gameStart").style.display = 'none'; //makes the button disappear when clicked
-    document.getElementById("btnContainer").style.display = "block"; //make trash bins appear 
-    document.getElementById("scoreContainer").style.display = "block";
+    document.getElementById("btnContainer").style.display = "block"; //make trash bins / items appear 
 
-
-    // an array of 7 items images
-    // let myOps = new Array(
-    //     'IMG1.PNG',
-    //     'IMG2.PNG',
-    //     'IMG3.PNG',
-    //     'IMG4.PNG',
-    //     'IMG5.PNG',
-    //     'IMG6.PNG',
-    //     'IMG7.PNG',
-    // );
-
-    // randomNum = Math.floor(Math.random() * myOps.length);
-    // randImg = myOps[randomNum]; //chooses a random img from folder
-    // console.log(randImg);
-
-    // //display imgage
-    // document.getElementById('imgPlace').src = `./img/guessImg/${randImg}`
+    //display imgage
+    document.getElementById('imgPlace').src = `./img/guessImg/${window.GLOBALITEMnum}`
     
-    // -----------------
-    // tryna figure our how to make statements of correct answers
+    //testing purposes
+    console.log("inside the 1funct " + window.GLOBALITEMnum);
 }
 
-//scores
-var score = 0; // start w score 
+function NUMBERCOMP(){
+    let items = new Array(
+        'IMG1.PNG',
+        'IMG2.PNG',
+        'IMG3.PNG',
+        'IMG4.PNG',
+        'IMG5.PNG',
+        'IMG6.PNG',
+        'IMG7.PNG',
+    );
 
-    const myOps = ["IMG1.PNG", "IMG2.PNG", "IMG3.PNG"];
-    randomNum = Math.floor(Math.random() * myOps.length);
-    randImg = myOps[randomNum]; //chooses a random img from folder
-    console.log(randImg);
+    randomNum = Math.floor(Math.random() * items.length);
+    randImg = items[randomNum]; //chooses a random img from folder
 
-    document.getElementById('imgPlace').src = `./img/guessImg/${randImg}`
+    return randImg;
+}
 
-function checkAnswer(userChoice){
+//global variable saving random item image
+window.GLOBALITEMnum = NUMBERCOMP();
 
-    // let guesses = ['1,2,3,4,5,6,7'];
+function checkA(userC){
+    let c = userC;
 
-    switch(userChoice + guesses){
-        case "glassIMG6.PNG":
-            alert('trueeee');
+    switch(c + window.GLOBALITEMnum){
+        case 'gIMG6.PNG':
+            console.log(c + window.GLOBALITEMnum); //testing purposes
+            alert('TRUE glass');
+            break;
+        case 'hIMG7.PNG':
+            console.log(c + window.GLOBALITEMnum);
+            alert('TRUE haz');
+            break;
+        case 'paIMG4.PNG':
+            console.log(c + window.GLOBALITEMnum);
+            alert('TRUE paper');
+            break;
+        case 'mIMG2.PNG':
+            console.log(c + window.GLOBALITEMnum);
+            alert('TRUE metal');
+            break;
+        case 'oIMG5.PNG':
+            console.log(c + window.GLOBALITEMnum);
+            alert('TRUE organic');
+            break;
+        case 'plaIMG1.PNG':
+            console.log(c + window.GLOBALITEMnum);
+            alert('TRUE plastic');
+            break;
+        case 'wIMG3.PNG':
+            console.log(c + window.GLOBALITEMnum);
+            alert('TRUE waste');
             break;
     }
+
+    //reload window each time after win, will fix later when score is added
+    window.location.reload();
 }
-
-
-//i think needing to save which randIMG to compare w trash can needs to be made
