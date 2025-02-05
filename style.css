@@ -63,8 +63,9 @@ button{
 }
 
 button:hover{
-    background-color: #1eba2e9c;/*#3a69e9;*/
+    background-color: #1eba2e9c;
     transition: 0.5s;
+    transform: scale(1.1);
 }
 
 
@@ -88,5 +89,31 @@ button:hover{
     border-radius: 90px;
     margin-left: 32.5em;
     margin-top: 50px;
-    filter: drop-shadow(10px 1px 90px) 
+    filter: drop-shadow(10px 1px 90px);
+    
+    animation-duration: 1s;
+    animation-name: scaleOps;
+}
+
+@keyframes scaleOps {
+    from{
+        scale: 0% 1;
+        opacity: 0%;
+    }
+
+    to{
+        scale: 100% 1;
+        opacity: 100%;
+    }
+}
+
+#scoreContainer{
+
+    /* display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%; */
+
 }
